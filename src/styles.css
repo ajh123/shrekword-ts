@@ -1,0 +1,7 @@
+.page_container {
+    width: 25ch;     /* Width of 25 characters */
+    height: 21ch;    /* Height of 21 characters */
+    border: 1px solid #000; /* Optional border for visibility */
+    padding: 10px;   /* Optional padding */
+    box-sizing: border-box; /* Include padding and border in the total width and height */
+}
