@@ -1,0 +1,29 @@
+{
+  "name": "sdoc",
+  "version": "1.0.0",
+  "description": "A Typescript libaray to parse ShrekWord documents",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "serve": "webpack serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajh123/shrekword-ts.git"
+  },
+  "author": "ajh123",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ajh123/shrekword-ts/issues"
+  },
+  "homepage": "https://github.com/ajh123/shrekword-ts#readme",
+  "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
+    "html-webpack-plugin": "^5.6.0",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.6.2",
+    "webpack": "^5.95.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.1.0"
+  }
+}
