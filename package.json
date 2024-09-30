@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "serve": "webpack serve"
+    "serve": "webpack serve --live-reload"
   },
   "repository": {
     "type": "git",

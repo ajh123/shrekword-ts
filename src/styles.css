@@ -1,7 +1,14 @@
 .page_container {
-    width: 25ch;     /* Width of 25 characters */
-    height: 21ch;    /* Height of 21 characters */
+    /*width: 25ch;     /* Width of 25 characters */
+    /*height: 21ch;    /* Height of 21 characters */
     border: 1px solid #000; /* Optional border for visibility */
-    padding: 10px;   /* Optional padding */
+    /*padding: 10px;   /* Optional padding */
     box-sizing: border-box; /* Include padding and border in the total width and height */
+    font-family: "Lucida Console", "Menlo", "Monaco", "Courier", monospace;
+}
+
+.terminal-row {
+    margin: 0;           /* Remove margin */
+    padding: 0;          /* Remove padding */
+    line-height: 1;      /* Optional: Adjust line height */
 }

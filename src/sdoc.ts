@@ -1,17 +1,17 @@
 import * as textutils from './textutils'
-import './term'
+import { Color, Term } from './term';
 
 export const _VERSION = "1.10"
 const ESCAPE_CHAR = "\x70"
 
 type BLIT = string[][];
 
-const escapeCharWidth = { 
-    c: 3, 
-    r: 2, 
-    a: 3, 
-    p: 2, 
-    t: 34 
+const escapeCharWidth: { [key: string]: number } = { 
+    "c": 3, 
+    "r": 2, 
+    "a": 3, 
+    "p": 2, 
+    "t": 34 
 };
 
 export function extractEscapeCodes(s: string): [string[], { [key: number]: string[] }] {
@@ -463,7 +463,7 @@ export function decode(str: string): SDOCDocument {
         }
     }
 
-    doc.pages[0][0] = doc.pages[0][0] || ["", "", { alignment: "l", lineX: 1 }];
+    doc.pages[0][0] = doc.pages[0][0] || { alignment: "l", lineX: 1 } as SDOCDocumentLine;
 
     const fgstring: string[] = [];
     const bgstring: string[] = [];
@@ -517,7 +517,7 @@ export function render(doc: SDOCDocument, a?: number, b?: number, renderNewlines
         y = 0; // Reset y for each page
 
         for (let ln = 0; ln < doc.pageHeight; ln++) {
-            const line = page[ln] || ["", "", "", "l"]; // Default line structure
+            const line = page[ln] || { alignment: "l", lineX: 1 } as SDOCDocumentLine; // Default line structure
             line[2] = ""; // Initialize third element (if applicable)
             let sx = 1; // Start x position for line
 
